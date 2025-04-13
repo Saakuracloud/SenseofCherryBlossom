@@ -1,0 +1,21 @@
+{
+	"modListVersion": 2,
+	"modList": [{
+		"modid": "senseofcherryblossom",
+		"name": "Sense of Cherry Blossom",
+		"description": "A mod for Minecraft 1.7.10 with Forge focused on Cherry Blossom theme.",
+		"version": "1.0.0",
+		"mcversion": "1.7.10",
+		"url":"",
+		"updateUrl": "",
+		"authorList": ["sakurac1oud"],
+		"credits": "",
+		"logoFile": "",
+		"screenshots": [],
+		"parent": "",
+		"requiredMods": [],
+		"dependencies": [],
+		"dependants": [],
+		"useDependencyInformation": false
+	}]
+}

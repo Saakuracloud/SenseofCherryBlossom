@@ -1,0 +1,45 @@
+plugins {
+    id 'com.gtnewhorizons.gtnhconvention'
+}
+
+minecraft {
+    extraRunJvmArguments.add("-Xmx8G")
+    extraRunJvmArguments.add("-Xms8G")
+}
+
+configurations.all {
+    resolutionStrategy {
+        force 'com.github.GTNewHorizons:GTNHLib:0.6.0:dev'
+    }
+}
+
+// 添加Java编译选项
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+    options.compilerArgs += [
+        '-Xlint:deprecation',
+        '-Xlint:unchecked'
+    ]
+}
+
+// 配置源集
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+        resources {
+            srcDir 'src/main/resources'
+        }
+    }
+}
+
+// 配置资源处理任务的重复处理策略
+tasks.withType(Copy) {
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}
+
+// 特别为processResources任务设置重复处理策略
+processResources {
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}

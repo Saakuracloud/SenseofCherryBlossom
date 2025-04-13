@@ -1,0 +1,8 @@
+# MetaItem
+item.MetaItem.0.name=§dTest Item
+item.MetaItem.1.name=§dSakura Cloud
+item.MetaItem.2.name=§bInitial Core
+
+# Tooltips
+tooltips.SakuraCloud.line1=§d❀Sakura Cloud❀
+tooltips.initial_core.line1=§b✧Initial✧

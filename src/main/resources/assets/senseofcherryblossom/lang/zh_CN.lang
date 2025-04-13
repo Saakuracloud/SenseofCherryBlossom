@@ -1,0 +1,76 @@
+# MetaItem
+item.MetaItem.0.name=§d测试物品
+item.MetaItem.1.name=§d桜雲
+item.MetaItem.2.name=§b原初核心
+item.MetaItem.3.name=§L§5§o§N§d反魂蝶
+bw.SakuraCloud Dream.name=§d薄樱庭
+
+item.MetaItemCircuit.0.name= §d华灵·枯花
+item.MetaItemCircuit.1.name= §d华灵·扬羽
+item.MetaItemCircuit.2.name= §d华灵·眩惑
+item.MetaItemCircuit.3.name= §d华灵·死蝶
+item.MetaItemCircuit.4.name= §d华灵·魔镜
+item.MetaItemCircuit.5.name= §d华灵·执念
+item.MetaItemCircuit.6.name= §d华灵·无寿
+item.MetaItemCircuit.7.name= §d华灵·执念
+item.MetaItemCircuit.8.name= §d华灵·幻灵
+item.MetaItemCircuit.9.name= §d华灵·神灵
+item.MetaItemCircuit.10.name= §d华灵·春眠
+item.MetaItemCircuit.11.name= §d华灵·开花
+item.MetaItemCircuit.12.name= §d华灵·惊梦
+item.MetaItemCircuit.13.name= §L§5§o§N§d华§a胥§b的§c永§e眠
+item.MetaItemCircuit.14.name= §L§5§o§N§a西§b行§c寺无§d余§e涅§f槃
+
+# Machine
+NameCherryBlossomLCR=未生之光
+NameCherryBlossomBorderofLife=§d生者必灭之理
+
+# 工具提示
+tooltips.SakuraCloud.line1=§d❀桜雲❀
+tooltips.initial_core.line1=§b✧原初✧
+tooltips.Hangonchou.line1=蕴含着生灵的力量，用祂能做到很多事情……
+tooltips.CherryBlossomCircuit.line00=§L§5§o§N彷徨的灵魂——宿罪——无道之路——自尽
+tooltips.CherryBlossomCircuit.line01=§L§5§o§N灵魂被某种力量拘束在容器中，执念让这些物品如此特别
+tooltips.CherryBlossomCircuit_ULV.line1=§L§NULV电路板
+tooltips.CherryBlossomCircuit_LV.line1=§L§NLV电路板
+tooltips.CherryBlossomCircuit_MV.line1=§L§NMV电路板
+tooltips.CherryBlossomCircuit_HV.line1=§L§NHV电路板
+tooltips.CherryBlossomCircuit_EV.line1=§L§NEV电路板
+tooltips.CherryBlossomCircuit_IV.line1=§L§NIV电路板
+tooltips.CherryBlossomCircuit_LUV.line1=§L§NLUV电路板
+tooltips.CherryBlossomCircuit_ZPM.line1=§L§NZPM电路板
+tooltips.CherryBlossomCircuit_UV.line1=§L§NUV电路板
+tooltips.CherryBlossomCircuit_UHV.line1=§L§NUHV电路板
+tooltips.CherryBlossomCircuit_UEV.line1=§L§NUEV电路板
+tooltips.CherryBlossomCircuit_UIV.line1=§L§NUIV电路板
+tooltips.CherryBlossomCircuit_UMV.line1=§L§NUMV电路板
+tooltips.CherryBlossomCircuit_UXV.line1=§L§NUXV电路板
+tooltips.CherryBlossomCircuit_MAX.line1=§L§NMAX电路板
+
+BLUE_PRINT_INFO=请参考§9Structure§1Lib§7全息投影，构建主体结构
+StructureTooComplex=另一维度的东西怎么可能凭空搭建
+Adder= §L§5§o§NSense of Cherry Blossom:樱之意志
+
+Tooltip_CherryBlossomLCR_MachineType=大型化学反应釜|未生之光
+Tooltip_CherryBlossomLCR_00=另一维度的意志具象化的体现，可以达成意想不到的结局
+Tooltip_CherryBlossomLCR_01=§d化学反应釜模式:
+Tooltip_CherryBlossomLCR_02=§4比相同机器快80%，自带64并行（可能不止）
+Tooltip_CherryBlossomLCR_03=§d黄泉平阪行路模式:
+Tooltip_CherryBlossomLCR_04=§4自带16并行，所有配方都需要消耗樱梦……
+
+Tooltip_CherryBlossomBorderofLife_MachineType=黄泉平阪行路
+Tooltip_CherryBlossomBorderofLife_00=§I死灵翩翩起舞，妖樱徐徐绽放
+Tooltip_CherryBlossomBorderofLife_01=§d所致众生枉死，可谓“生者必灭”
+Tooltip_CherryBlossomBorderofLife_02=§4对此一切，甚为不解
+Tooltip_CherryBlossomBorderofLife_03=§d然为夙愿，但死无妨
+Tooltip_CherryBlossomBorderofLife_04=§4身如毒蛾，扑往灼浪
+Tooltip_CherryBlossomBorderofLife_05=§d求此孤身，了却变乱
+Tooltip_CherryBlossomBorderofLife_06=§4愿此孤魂，直达冥界
+Tooltip_CherryBlossomBorderofLife_07=§d
+Tooltip_CherryBlossomBorderofLife_08=§4所有与生灵有关的物质都能在一瞬间被改变形态
+Tooltip_CherryBlossomBorderofLife_09=§4或许有没有物质能活着走出来都是个迷……
+
+#recipe
+senseofcherryblossom.recipe.ThePassagetoYominoHirasaka=§d黄泉平阪行路
+senseofcherryblossom.recipe.TheBorderofLife=§d生与死的境界
+
