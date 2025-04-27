@@ -24,6 +24,7 @@ item.MetaItemCircuit.14.name= §L§5§o§N§a西§b行§c寺无§d余§e涅§f�
 # Machine
 NameCherryBlossomLCR=未生之光
 NameCherryBlossomBorderofLife=§d生者必灭之理
+NameCherryBlossomAssembler=无寿之梦
 
 # 工具提示
 tooltips.SakuraCloud.line1=§d❀桜雲❀
@@ -49,16 +50,18 @@ tooltips.CherryBlossomCircuit_MAX.line1=§L§NMAX电路板
 
 BLUE_PRINT_INFO=请参考§9Structure§1Lib§7全息投影，构建主体结构
 StructureTooComplex=另一维度的东西怎么可能凭空搭建
-Adder= §L§5§o§NSense of Cherry Blossom:樱之意志
+Adder=§L§5§o§NSense of Cherry Blossom:樱之意志
 
-Tooltip_CherryBlossomLCR_MachineType=大型化学反应釜|未生之光
+Tooltip_CherryBlossomLCR_MachineType=大型化学反应釜|物质剥离
 Tooltip_CherryBlossomLCR_00=另一维度的意志具象化的体现，可以达成意想不到的结局
 Tooltip_CherryBlossomLCR_01=§d化学反应釜模式:
 Tooltip_CherryBlossomLCR_02=§4比相同机器快80%，自带64并行（可能不止）
-Tooltip_CherryBlossomLCR_03=§d黄泉平阪行路模式:
-Tooltip_CherryBlossomLCR_04=§4自带16并行，所有配方都需要消耗樱梦……
+Tooltip_CherryBlossomLCR_03=§d物质剥离模式:
+Tooltip_CherryBlossomLCR_04=§4自带16并行
+CherryBlossomLCR.modeMsg.0=大型化学反应釜
+CherryBlossomLCR.modeMsg.1=物质剥离
 
-Tooltip_CherryBlossomBorderofLife_MachineType=黄泉平阪行路
+Tooltip_CherryBlossomBorderofLife_MachineType=物质剥离|魂灵电路装配
 Tooltip_CherryBlossomBorderofLife_00=§I死灵翩翩起舞，妖樱徐徐绽放
 Tooltip_CherryBlossomBorderofLife_01=§d所致众生枉死，可谓“生者必灭”
 Tooltip_CherryBlossomBorderofLife_02=§4对此一切，甚为不解
@@ -69,6 +72,21 @@ Tooltip_CherryBlossomBorderofLife_06=§4愿此孤魂，直达冥界
 Tooltip_CherryBlossomBorderofLife_07=§d
 Tooltip_CherryBlossomBorderofLife_08=§4所有与生灵有关的物质都能在一瞬间被改变形态
 Tooltip_CherryBlossomBorderofLife_09=§4或许有没有物质能活着走出来都是个迷……
+CherryBlossomBorderofLife.modeMsg.0=魂灵电路装配
+CherryBlossomBorderofLife.modeMsg.1=物质剥离
+
+Tooltip_CherryBlossomAssembler_MachineType= 组装机
+Tooltip_CherryBlossomAssembler_Controller=一切都是这么短暂，一切都似乎是一场梦
+Tooltip_CherryBlossomAssembler_01=另一维度的力量让这台机器变得如此不凡
+Tooltip_CherryBlossomAssembler_02=所有配方均可运行
+Tooltip_CherryBlossomAssembler_03=最大并行数取决于线圈等级，具体为2^(线圈等级+4)，使用永恒线圈时默认无上限
+Tooltip_CherryBlossomAssembler_04=玻璃限制能源仓等级，使用锇强化玻璃解锁激光仓,使用无尽强化硼玻璃解锁无损超频
+Tooltip_CherryBlossomAssembler_05=部件装配线外壳决定处理时间，当使用UV以上部件装配线外壳时，具体处理时间 = 基础时间 / (1 + 0.5 * e^(0.6*(部件装配线外壳等级-6)))
+Tooltip_CherryBlossomAssembler_06=机器外壳等级影响能源消耗,外壳每高一级减少5%能源消耗，UHV机器外壳解锁无线模式
+Tooltip_CherryBlossomAssembler_07=运行需要在输入仓内输入2001*(线圈等级+玻璃等级+部件装配线外壳等级+机器外壳等级）ml的§4桜❀夢§0
+Tooltip_CherryBlossomAssembler_08=或者输入1008*(线圈等级+玻璃等级+部件装配线外壳等级+机器外壳等级）ml的§4桜❀夢等离子体§0
+CherryBlossomAssembler.modeMsg.0=组装机
+
 
 #recipe
 senseofcherryblossom.recipe.ThePassagetoYominoHirasaka=§d黄泉平阪行路

@@ -25,6 +25,7 @@ import gregtech.api.util.HatchElementBuilder;
 import gregtech.api.util.MultiblockTooltipBuilder;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.StatCollector;
 import net.minecraftforge.common.util.ForgeDirection;
 import org.jetbrains.annotations.NotNull;
 
@@ -138,6 +139,11 @@ public class CherryBlossomLCR extends MultiMachineBase<CherryBlossomLCR> {
             : ParallelMultiplierCherryBlossomLCR_2;
     }
 
+    public String getMachineModeName(int mode) {
+        return StatCollector.translateToLocal("CherryBlossomLCR.modeMsg." + mode);
+    }
+
+
     private final String[][] shape =new String[][]{
         {"       ","       ","   G   ","  GGG  ","   G   ","       ","       "},
         {"       ","   D   ","  GAG  "," DA AD ","  GAG  ","   D   ","       "},
@@ -167,14 +173,18 @@ public class CherryBlossomLCR extends MultiMachineBase<CherryBlossomLCR> {
                     'H',
                     HatchElementBuilder.<CherryBlossomLCR>builder()
                         .atLeast(InputHatch, OutputHatch, InputBus, OutputBus)
-                        .casingIndex(11)
+                        // blockcasings1:11 的正确casingIndex计算:
+                        // (blockId=12 << 4) | meta=11 = 203
+                        .casingIndex(25)
                         .dot(1)
                         .buildAndChain(GregTechAPI.sBlockCasings2, 5))
                 .addElement(
                     'I',
                     HatchElementBuilder.<CherryBlossomLCR>builder()
                 .atLeast(Energy.or(ExoticEnergy))
-                .casingIndex(11)
+                // blockcasings1:11 的正确casingIndex计算:
+                // (blockId=12 << 4) | meta=11 = 203
+                .casingIndex(25)
                 .dot(1)
                 .buildAndChain(GregTechAPI.sBlockCasings9, 5)) //
                 .build();

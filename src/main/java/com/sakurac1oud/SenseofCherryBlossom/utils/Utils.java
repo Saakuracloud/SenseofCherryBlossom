@@ -12,7 +12,9 @@ import java.util.Objects;
 import java.util.function.Consumer;
 import java.util.function.IntFunction;
 
+import gregtech.api.enums.VoltageIndex;
 import gregtech.api.metatileentity.implementations.MTEExtendedPowerMultiBlockBase;
+import journeymap.shadow.org.intellij.lang.annotations.MagicConstant;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -463,5 +465,11 @@ public final class Utils {
      */
     public static int getMachineTotalPowerTier(@NotNull MTEExtendedPowerMultiBlockBase<?> machine) {
         return (int) Math.ceil(calculateVoltageTier(getMachineTotalPower(machine)));
+    }
+
+    @MagicConstant(valuesFromClass = VoltageIndex.class)
+    public static int getVoltageForCoil(HeatingCoilLevel coilLevel) {
+        // noinspection MagicConstant
+        return coilLevel.getTier() + 1;
     }
 }

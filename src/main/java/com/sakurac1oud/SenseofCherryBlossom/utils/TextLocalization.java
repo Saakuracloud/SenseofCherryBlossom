@@ -274,5 +274,17 @@ public class TextLocalization {
     public static final String Tooltip_CherryBlossomBorderofLife_09 = TextEnums.tr("Tooltip_CherryBlossomBorderofLife_09");
     public static final String Tooltip_CherryBlossomBorderofLife_CoilInfo = TextEnums.tr("Tooltip_CherryBlossomBorderofLife_CoilInfo");
 
-}
+    public static final String NameCherryBlossomAssembler = TextEnums.tr("NameCherryBlossomAssembler");
+    public static final String Tooltip_CherryBlossomAssembler_MachineType = TextEnums.tr("Tooltip_CherryBlossomAssembler_MachineType");
+    public static final String Tooltip_CherryBlossomAssembler_Controller = TextEnums.tr("Tooltip_CherryBlossomAssembler_Controller");
+    public static final String Tooltip_CherryBlossomAssembler_01 = TextEnums.tr("Tooltip_CherryBlossomAssembler_01");
+    public static final String Tooltip_CherryBlossomAssembler_02 = TextEnums.tr("Tooltip_CherryBlossomAssembler_02");
+    public static final String Tooltip_CherryBlossomAssembler_03 = TextEnums.tr("Tooltip_CherryBlossomAssembler_03");
+    public static final String Tooltip_CherryBlossomAssembler_04 = TextEnums.tr("Tooltip_CherryBlossomAssembler_04");
+    public static final String Tooltip_CherryBlossomAssembler_05 = TextEnums.tr("Tooltip_CherryBlossomAssembler_05");
+    public static final String Tooltip_CherryBlossomAssembler_06 = TextEnums.tr("Tooltip_CherryBlossomAssembler_06");
+    public static final String Tooltip_CherryBlossomAssembler_07 = TextEnums.tr("Tooltip_CherryBlossomAssembler_07");
+    public static final String
+            Tooltip_CherryBlossomAssembler_08 = TextEnums.tr("Tooltip_CherryBlossomAssembler_08");
 
+}

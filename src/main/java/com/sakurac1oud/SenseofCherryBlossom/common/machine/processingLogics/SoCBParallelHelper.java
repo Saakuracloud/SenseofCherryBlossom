@@ -507,7 +507,7 @@ public class SoCBParallelHelper extends gregtech.api.util.ParallelHelper {
         }
 
 
-        long eutUseAfterOC = calculator.setCurrentParallel(currentParallel).setParallel(Math.min(currentParallel, originalMaxParallel)).calculate().getConsumption();;
+        long eutUseAfterOC = calculator.setCurrentParallel(currentParallel).setParallel(Math.min(currentParallel, originalMaxParallel)).calculate().getConsumption();
 //        calculator.setParallel(Math.min(currentParallel, originalMaxParallel))
 //                  .calculate();
         if (currentParallel > originalMaxParallel) {

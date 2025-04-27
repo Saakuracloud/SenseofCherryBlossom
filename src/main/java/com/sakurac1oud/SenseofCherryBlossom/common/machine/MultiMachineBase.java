@@ -452,8 +452,7 @@ public abstract class MultiMachineBase<T extends MultiMachineBase<T>>
             || addExoticEnergyInputToMachineList(aTileEntity, aBaseCasingIndex);
     }
 
-    public boolean addEnergyHatchOrExoticEnergyHatchToMachineList(IGregTechTileEntity aTileEntity,
-                                                                  int aBaseCasingIndex) {
+    public boolean addEnergyHatchOrExoticEnergyHatchToMachineList(IGregTechTileEntity aTileEntity, int aBaseCasingIndex) {
         return addEnergyInputToMachineList(aTileEntity, aBaseCasingIndex)
             || addExoticEnergyInputToMachineList(aTileEntity, aBaseCasingIndex);
     }
@@ -768,6 +767,5 @@ public abstract class MultiMachineBase<T extends MultiMachineBase<T>>
                     + EnumChatFormatting.RESET);
         }
     }
-
     // endregion
 }

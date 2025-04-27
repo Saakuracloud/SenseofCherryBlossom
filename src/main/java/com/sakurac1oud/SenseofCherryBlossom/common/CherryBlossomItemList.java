@@ -24,6 +24,7 @@ public enum CherryBlossomItemList {
     //machines
     CherryBlossomLCR,
     CherryBlossomBorderofLife,
+    CherryBlossomAssembler,
 
     //circuit
     CherryBlossomCircuit_ULV,

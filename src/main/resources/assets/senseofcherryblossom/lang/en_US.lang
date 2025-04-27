@@ -1,8 +1,90 @@
+
 # MetaItem
 item.MetaItem.0.name=§dTest Item
 item.MetaItem.1.name=§dSakura Cloud
 item.MetaItem.2.name=§bInitial Core
+item.MetaItem.3.name=§L§5§o§N§dSoul Butterfly
+
+# MetaItemCircuit
+item.MetaItemCircuit.0.name= §dFlower Spirit·Withered Blossom
+item.MetaItemCircuit.1.name= §dFlower Spirit·Swallowtail
+item.MetaItemCircuit.2.name= §dFlower Spirit·Dazzling
+item.MetaItemCircuit.3.name= §dFlower Spirit·Death Butterfly
+item.MetaItemCircuit.4.name= §dFlower Spirit·Magic Mirror
+item.MetaItemCircuit.5.name= §dFlower Spirit·Obsession
+item.MetaItemCircuit.6.name= §dFlower Spirit·Ageless
+item.MetaItemCircuit.7.name= §dFlower Spirit·Obsession
+item.MetaItemCircuit.8.name= §dFlower Spirit·Phantom
+item.MetaItemCircuit.9.name= §dFlower Spirit·Divine Spirit
+item.MetaItemCircuit.10.name= §dFlower Spirit·Spring Slumber
+item.MetaItemCircuit.11.name= §dFlower Spirit·Blooming
+item.MetaItemCircuit.12.name= §dFlower Spirit·Startled Dream
+item.MetaItemCircuit.13.name= §L§5§o§N§dFlower§aXu's§b Eternal§c Slumber
+item.MetaItemCircuit.14.name= §L§5§o§N§aSaigyoji§b's§c Nirvana§d Without§e Remainder
+
+# Machine
+NameCherryBlossomLCR=Light of Unborn
+NameCherryBlossomBorderofLife=§dPrinciple of Impermanence
+NameCherryBlossomAssembler=Dream of Agelessness
 
 # Tooltips
 tooltips.SakuraCloud.line1=§d❀Sakura Cloud❀
 tooltips.initial_core.line1=§b✧Initial✧
+tooltips.Hangonchou.line1=Contains the power of living beings, it can accomplish many things...
+tooltips.CherryBlossomCircuit.line00=§L§5§o§NWandering souls - Original sin - Path without virtue - Suicide
+tooltips.CherryBlossomCircuit.line01=§L§5§o§NSouls bound by some force, obsession makes these items special
+tooltips.CherryBlossomCircuit_ULV.line1=§L§NULV Circuit Board
+tooltips.CherryBlossomCircuit_LV.line1=§L§NLV Circuit Board
+tooltips.CherryBlossomCircuit_MV.line1=§L§NMV Circuit Board
+tooltips.CherryBlossomCircuit_HV.line1=§L§NHV Circuit Board
+tooltips.CherryBlossomCircuit_EV.line1=§L§NEV Circuit Board
+tooltips.CherryBlossomCircuit_IV.line1=§L§NIV Circuit Board
+tooltips.CherryBlossomCircuit_LUV.line1=§L§NLUV Circuit Board
+tooltips.CherryBlossomCircuit_ZPM.line1=§L§NZPM Circuit Board
+tooltips.CherryBlossomCircuit_UV.line1=§L§NUV Circuit Board
+tooltips.CherryBlossomCircuit_UHV.line1=§L§NUHV Circuit Board
+tooltips.CherryBlossomCircuit_UEV.line1=§L§NUEV Circuit Board
+tooltips.CherryBlossomCircuit_UIV.line1=§L§NUIV Circuit Board
+tooltips.CherryBlossomCircuit_UMV.line1=§L§NUMV Circuit Board
+tooltips.CherryBlossomCircuit_UXV.line1=§L§NUXV Circuit Board
+tooltips.CherryBlossomCircuit_MAX.line1=§L§NMAX Circuit Board
+
+# Machine Descriptions
+Tooltip_CherryBlossomLCR_MachineType=Large Chemical Reactor|Matter Stripping
+Tooltip_CherryBlossomLCR_00=Manifestation of will from another dimension, can achieve unexpected results
+Tooltip_CherryBlossomLCR_01=§dChemical Reactor Mode:
+Tooltip_CherryBlossomLCR_02=§480% faster than same-tier machines, innate 64 parallel (possibly more)
+Tooltip_CherryBlossomLCR_03=§dMatter Stripping Mode:
+Tooltip_CherryBlossomLCR_04=§4Innate 16 parallel
+CherryBlossomLCR.modeMsg.0=Large Chemical Reactor
+CherryBlossomLCR.modeMsg.1=Matter Stripping
+
+Tooltip_CherryBlossomBorderofLife_MachineType=Matter Stripping|Soul Circuit Assembly
+Tooltip_CherryBlossomBorderofLife_00=§IDead souls dance gracefully, demonic cherry blossoms bloom slowly
+Tooltip_CherryBlossomBorderofLife_01=§dCausing all beings to die in vain, called "Principle of Impermanence"
+Tooltip_CherryBlossomBorderofLife_02=§4Towards all this, deeply puzzled
+Tooltip_CherryBlossomBorderofLife_03=§dYet for long-cherished wish, death matters not
+Tooltip_CherryBlossomBorderofLife_04=§4Body like poisonous moth, rushing towards scorching waves
+Tooltip_CherryBlossomBorderofLife_05=§dSeeking this solitary self, to end chaos
+Tooltip_CherryBlossomBorderofLife_06=§4May this lonely soul reach the underworld
+Tooltip_CherryBlossomBorderofLife_07=§d
+Tooltip_CherryBlossomBorderofLife_08=§4All matter related to living beings can change form in an instant
+Tooltip_CherryBlossomBorderofLife_09=§4Perhaps whether any matter can come out alive is a mystery...
+CherryBlossomBorderofLife.modeMsg.0=Soul Circuit Assembly
+CherryBlossomBorderofLife.modeMsg.1=Matter Stripping
+
+Tooltip_CherryBlossomAssembler_MachineType= Assembler
+Tooltip_CherryBlossomAssembler_Controller=Everything is so transient, everything seems like a dream
+Tooltip_CherryBlossomAssembler_01=Power from another dimension makes this machine extraordinary
+Tooltip_CherryBlossomAssembler_02=All recipes can be processed
+Tooltip_CherryBlossomAssembler_03=Max parallel depends on coil tier, specifically 2^(coil tier+4), infinite when using Eternal Coil
+Tooltip_CherryBlossomAssembler_04=Glass limits energy hatch tier, osmium-reinforced glass unlocks laser hatch, infinite boron-reinforced glass unlocks lossless overclocking
+Tooltip_CherryBlossomAssembler_05=Assembly line casing determines processing time, when using UV+ casing: processing time = base time / (1 + 0.5 * e^(0.6*(casing tier-6)))
+Tooltip_CherryBlossomAssembler_06=Machine casing tier affects energy consumption, each higher tier reduces 5% consumption, UHV casing unlocks wireless mode
+Tooltip_CherryBlossomAssembler_07=Requires input of 2001*(coil tier+glass tier+casing tier+machine tier)ml §4Sakura❀Dream§0 in input bus
+Tooltip_CherryBlossomAssembler_08=Or input 1008*(coil tier+glass tier+casing tier+machine tier)ml §4Sakura❀Dream Plasma§0
+CherryBlossomAssembler.modeMsg.0=Assembler
+
+#recipe
+senseofcherryblossom.recipe.ThePassagetoYominoHirasaka=§dPassage to Yomino Hirasaka
+senseofcherryblossom.recipe.TheBorderofLife=§dBorder of Life and Death

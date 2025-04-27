@@ -8,10 +8,9 @@ import com.gtnewhorizons.modularui.api.math.Pos2d;
 import com.sakurac1oud.SenseofCherryBlossom.common.CherryBlossomItemList;
 import com.sakurac1oud.SenseofCherryBlossom.common.material.MaterialCherryBlossom;
 import com.sakurac1oud.SenseofCherryBlossom.common.recipe.RecipeMap.CherryBlossomRecipe;
-import gregtech.api.enums.Materials;
+import gregtech.api.enums.*;
 import com.sakurac1oud.SenseofCherryBlossom.common.recipe.RecipeMap.Frontend.CherryBlossomGeneralFrontend;
 import com.sakurac1oud.SenseofCherryBlossom.utils.SoCBRecipeBuilder;
-import gregtech.api.enums.OrePrefixes;
 import gregtech.api.objects.ItemData;
 import gregtech.api.recipe.BasicUIPropertiesBuilder;
 import gregtech.api.recipe.NEIRecipePropertiesBuilder;
@@ -38,6 +37,109 @@ public class ThePassagetoYominoHirasaka {
     private static final RecipeMap<?> TPYH = CherryBlossomRecipe.ThePassagetoYominoHirasaka;
 
     public static void loadRecipes() {
+        SoCBRecipeBuilder.builder()
+                    .itemInputs(ItemList.Circuit_Board_Bio_Ultra.get(512),ItemList.Circuit_Chip_Biocell.get(1024),ItemList.Circuit_Wafer_Bioware.get(64))
+                    .fluidInputs(MaterialCherryBlossom.CherryBlossomDreamMatter.getMolten(8000),Materials.UUMatter.getFluid(16000))
+            .itemOutputs(CherryBlossomItemList.Hangonchou.get(64))
+                    .eut(RECIPE_UIV)
+                    .duration(1000)
+                    .addTo(TPYH);
+
+        SoCBRecipeBuilder.builder()
+            .itemInputs(ItemList.Circuit_Board_Wetware_Extreme.get(2048),ItemList.Circuit_Chip_QPIC.get(512),ItemList.Circuit_Wetwaremainframe.get(64))
+            .fluidInputs(MaterialCherryBlossom.CherryBlossomDreamMatter.getMolten(8000),Materials.UUMatter.getFluid(32000),Materials.Mutation.getFluid(1600),Materials.Radon.getGas(3200))
+            .itemOutputs(CherryBlossomItemList.Hangonchou.get(4))
+            .eut(RECIPE_UV)
+            .duration(10000)
+            .addTo(TPYH);
+
+        SoCBRecipeBuilder.builder()
+            .itemInputs(GTUtility.copyAmountUnsafe(0,CherryBlossomItemList.Hangonchou.get(1)))
+            .fluidOutputs(MaterialCherryBlossom.CherryBlossomDreamMatter.getMolten(250))
+            .eut(RECIPE_UV)
+            .duration(10000)
+            .addTo(TPYH);
+
+        SoCBRecipeBuilder.builder()
+            .itemInputs(GTUtility.getIntegratedCircuit(1),GTUtility.copyAmountUnsafe(0,CherryBlossomItemList.Hangonchou.get(1)))
+            .fluidInputs(Materials.UUMatter.getFluid(500))
+            .fluidOutputs(MaterialCherryBlossom.CherryBlossomDreamMatter.getMolten(500))
+            .eut(RECIPE_UV)
+            .duration(10000)
+            .addTo(TPYH);
+
+        SoCBRecipeBuilder.builder()
+            .itemInputs(GTUtility.getIntegratedCircuit(2),GTUtility.copyAmountUnsafe(0,CherryBlossomItemList.Hangonchou.get(1)))
+            .fluidInputs(Materials.GrowthMediumRaw.getFluid(1000))
+            .fluidOutputs(MaterialCherryBlossom.CherryBlossomDreamMatter.getMolten(1500))
+            .eut(RECIPE_UHV)
+            .duration(10000)
+            .addTo(TPYH);
+
+        SoCBRecipeBuilder.builder()
+            .itemInputs(GTUtility.getIntegratedCircuit(3),GTUtility.copyAmountUnsafe(0,CherryBlossomItemList.Hangonchou.get(1)))
+            .fluidInputs(Materials.GrowthMediumSterilized.getFluid(1000))
+            .fluidOutputs(MaterialCherryBlossom.CherryBlossomDreamMatter.getMolten(2000))
+            .eut(RECIPE_UHV)
+            .duration(10000)
+            .addTo(TPYH);
+
+        SoCBRecipeBuilder.builder()
+            .itemInputs(GTUtility.getIntegratedCircuit(4),GTUtility.copyAmountUnsafe(0,CherryBlossomItemList.Hangonchou.get(1)))
+            .fluidInputs(Materials.BioMediumRaw.getFluid(1000))
+            .fluidOutputs(MaterialCherryBlossom.CherryBlossomDreamMatter.getMolten(2500))
+            .eut(RECIPE_UHV)
+            .duration(10000)
+            .addTo(TPYH);
+
+        SoCBRecipeBuilder.builder()
+            .itemInputs(GTUtility.getIntegratedCircuit(5),GTUtility.copyAmountUnsafe(0,CherryBlossomItemList.Hangonchou.get(1)))
+            .fluidInputs(Materials.BioMediumSterilized.getFluid(1000))
+            .fluidOutputs(MaterialCherryBlossom.CherryBlossomDreamMatter.getMolten(3000))
+            .eut(RECIPE_UHV)
+            .duration(10000)
+            .addTo(TPYH);
+
+        SoCBRecipeBuilder.builder()
+            .itemInputs(GTUtility.getIntegratedCircuit(6),GTUtility.copyAmountUnsafe(0,CherryBlossomItemList.Hangonchou.get(1)))
+            .fluidInputs(Materials.Grade7PurifiedWater.getFluid(1000))
+            .fluidOutputs(MaterialCherryBlossom.CherryBlossomDreamMatter.getMolten(4000))
+            .eut(RECIPE_UEV)
+            .duration(10000)
+            .addTo(TPYH);
+
+        SoCBRecipeBuilder.builder()
+            .itemInputs(GTUtility.getIntegratedCircuit(7),GTUtility.copyAmountUnsafe(0,CherryBlossomItemList.Hangonchou.get(1)))
+            .fluidInputs(Materials.Grade8PurifiedWater.getFluid(1000))
+            .fluidOutputs(MaterialCherryBlossom.CherryBlossomDreamMatter.getMolten(5000))
+            .eut(RECIPE_UEV)
+            .duration(10000)
+            .addTo(TPYH);
+
+        SoCBRecipeBuilder.builder()
+            .itemInputs(GTUtility.getIntegratedCircuit(8),GTUtility.copyAmountUnsafe(0,CherryBlossomItemList.Hangonchou.get(1)))
+            .fluidInputs(Materials.Infinity.getMolten(1000))
+            .fluidOutputs(MaterialCherryBlossom.CherryBlossomDreamMatter.getMolten(10000))
+            .eut(RECIPE_UEV)
+            .duration(10000)
+            .addTo(TPYH);
+
+        SoCBRecipeBuilder.builder()
+            .itemInputs(GTUtility.getIntegratedCircuit(9),GTUtility.copyAmountUnsafe(0,CherryBlossomItemList.Hangonchou.get(1)))
+            .fluidInputs(MaterialsUEVplus.SpaceTime.getFluid(1000))
+            .fluidOutputs(MaterialCherryBlossom.CherryBlossomDreamMatter.getMolten(50000))
+            .eut(RECIPE_UIV)
+            .duration(10000)
+            .addTo(TPYH);
+
+        SoCBRecipeBuilder.builder()
+            .itemInputs(GTUtility.getIntegratedCircuit(10),GTUtility.copyAmountUnsafe(0,CherryBlossomItemList.Hangonchou.get(1)))
+            .fluidInputs(MaterialsUEVplus.QuarkGluonPlasma.getFluid(1000))
+            .fluidOutputs(MaterialCherryBlossom.CherryBlossomDreamMatter.getMolten(100000),MaterialCherryBlossom.CherryBlossomDreamMatter.getPlasma(100000))
+            .eut(RECIPE_UIV)
+            .duration(10000)
+            .addTo(TPYH);
+
         SoCBRecipeBuilder
             .builder()
             .itemInputs(

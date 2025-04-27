@@ -2,6 +2,10 @@
 
 repositories {
     maven {
+        name = "GTNH"
+        url = "https://nexus.gtnewhorizons.com/repository/public/"
+    }
+    maven {
         name = "SpongePowered"
         url = "https://repo.spongepowered.org/repository/maven-public/"
     }

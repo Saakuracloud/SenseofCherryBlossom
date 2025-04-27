@@ -28,6 +28,7 @@ import gregtech.api.util.MultiblockTooltipBuilder;
 import gtPlusPlus.core.block.ModBlocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.StatCollector;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.FluidStack;
 import org.jetbrains.annotations.NotNull;
@@ -50,9 +51,9 @@ public class CherryBlossomBorderofLife extends MultiMachineBase<CherryBlossomBor
     private final int horizontalOffSet = 8;
     private final int verticalOffSet = 28;
     private final int depthOffSet = 5;
-    private static final int SpeedUpMultiplierBounderofLife_1 = 2;
+    private static final int SpeedUpMultiplierBounderofLife_1 = 16;
     private static final int SpeedUpMultiplierBounderofLife_2 = 8;
-    private static final int ParallelMultiplierBounderofLife_1 = 32;
+    private static final int ParallelMultiplierBounderofLife_1 = 16384;
     private static final int ParallelMultiplierBounderofLife_2 = 128;
     private static IStructureDefinition<CherryBlossomBorderofLife> STRUCTURE_DEFINITION = null;
 
@@ -78,7 +79,7 @@ public class CherryBlossomBorderofLife extends MultiMachineBase<CherryBlossomBor
     @Override
     public int totalMachineMode() {
         /*
-         * 0 - ThePassagetoYominoHirasaka
+         * 0 - CircuitAssembler
          * 1 - BorderofLife
          */
         return 2;
@@ -153,6 +154,11 @@ public class CherryBlossomBorderofLife extends MultiMachineBase<CherryBlossomBor
         return machineMode == 0 ? ParallelMultiplierBounderofLife_1
             : ParallelMultiplierBounderofLife_2;
     }
+
+    public String getMachineModeName(int mode) {
+        return StatCollector.translateToLocal("CherryBlossomBorderofLife.modeMsg." + mode);
+    }
+
 
     private final String[][] shape = new String[][] {
         // Layer 1
@@ -237,7 +243,9 @@ public class CherryBlossomBorderofLife extends MultiMachineBase<CherryBlossomBor
                     'C',
                     HatchElementBuilder.<CherryBlossomBorderofLife>builder()
                         .atLeast(InputHatch, OutputHatch, InputBus, OutputBus,Energy.or(ExoticEnergy))
-                        .casingIndex(11)
+                        // blockcasings1:11 的正确casingIndex计算:
+                        // (blockId=12 << 4) | meta=11 = 203
+                        .casingIndex(203)
                         .dot(1)
                         .buildAndChain(GregTechAPI.sBlockCasings2, 5))
                 .addElement(
@@ -253,7 +261,9 @@ public class CherryBlossomBorderofLife extends MultiMachineBase<CherryBlossomBor
                 .addElement('Q',
                     HatchElementBuilder.<CherryBlossomBorderofLife>builder()
                         .atLeast(InputHatch, OutputHatch, InputBus, OutputBus,Energy.or(ExoticEnergy))
-                        .casingIndex(11)
+                        // blockcasings1:11 的正确casingIndex计算:
+                        // (blockId=12 << 4) | meta=11 = 203
+                        .casingIndex(203)
                         .dot(1)
                         .buildAndChain(GregTechAPI.sBlockCasings4, 9))
                 .addElement('R', ofBlock(GregTechAPI.sBlockCasings4, 10))

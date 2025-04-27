@@ -5,6 +5,7 @@ import com.sakurac1oud.SenseofCherryBlossom.common.CherryBlossomItemList;
 import com.sakurac1oud.SenseofCherryBlossom.common.material.MaterialCherryBlossom;
 import com.sakurac1oud.SenseofCherryBlossom.common.material.MaterialPool;
 import com.sakurac1oud.SenseofCherryBlossom.common.recipe.RecipeMap.CherryBlossomRecipe;
+import com.sakurac1oud.SenseofCherryBlossom.utils.SoCBRecipeBuilder;
 import com.sakurac1oud.SenseofCherryBlossom.utils.rewrite.CherryBlossomItemID;
 import gregtech.api.enums.*;
 import gregtech.api.recipe.RecipeMap;
@@ -21,6 +22,7 @@ import net.minecraftforge.fluids.FluidStack;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
+import cpw.mods.fml.common.Loader;
 import bartworks.util.BWUtil;
 import gregtech.api.objects.ItemData;
 import gregtech.api.util.GTOreDictUnificator;
@@ -41,17 +43,20 @@ public class BorderofLife {
 
     public static void loadRecipes(){
 
+//        SoCBRecipeBuilder.builder()
+//                .itemInputs(CherryBlossomItemList.Hangonchou.get(128),ItemList.Field_Generator_UV.get(64),ItemList.Circuit_Chip_Optical.get(512))
+
         GTValues.RA.stdBuilder()
             .itemInputs(
                 GTOreDictUnificator.get(OrePrefixes.frameGt,MaterialsUEVplus.Eternity, 16384),
-                ItemList.Field_Generator_UMV.get(64),
-                CherryBlossomItemList.Hangonchou.get(2048),
+                ItemList.Field_Generator_UMV.get(1024),
+                ItemList.Sensor_UMV.get(1024),
                 CherryBlossomItemList.Hangonchou.get(16384),
-                GTOreDictUnificator.get(OrePrefixes.nanite,MaterialsUEVplus.Eternity, 2048),
+                GTOreDictUnificator.get(OrePrefixes.nanite,MaterialsUEVplus.Eternity, 64),
                 CustomItemList.RadoxPolymerLens.get(1024),
-                GTOreDictUnificator.get(OrePrefixes.ingotQuintuple,Materials.RadoxPolymer, 16384)
+                GTOreDictUnificator.get(OrePrefixes.plateSuperdense,Materials.RadoxPolymer, 64)
             )
-            .fluidInputs(MaterialPool.SakuraCloudDream.getFluidOrGas(144000),MaterialsUEVplus.BlackDwarfMatter.getFluid(14400),MaterialsUEVplus.SpaceTime.getMolten(1638400))
+            .fluidInputs(MaterialCherryBlossom.CherryBlossomDreamMatter.getFluid(1440000),MaterialsUEVplus.MagMatter.getFluid(144000),MaterialsUEVplus.SpaceTime.getMolten(1638400),MaterialsUEVplus.DimensionallyTranscendentCrudeCatalyst.getFluid(2560000))
             .itemOutputs(CherryBlossomItemList
                     .CherryBlossomCircuit_ULV.get(16384*15),
                 CherryBlossomItemList.CherryBlossomCircuit_LV.get(16384*14),
@@ -74,10 +79,15 @@ public class BorderofLife {
             .specialValue(15000)
             .addTo(BoL);
 
-        CherryBlossomItemID IC2_Circuit = CherryBlossomItemID
-            .create(GTModHandler.getModItem(Mods.IndustrialCraft2.ID, "itemPartCircuit", 1));
-        CherryBlossomItemID IC2_AdvCircuit = CherryBlossomItemID
-            .create(GTModHandler.getModItem(Mods.IndustrialCraft2.ID, "itemPartCircuitAdv", 1));
+        // Check if IndustrialCraft2 is loaded before getting items
+        CherryBlossomItemID IC2_Circuit = null;
+        CherryBlossomItemID IC2_AdvCircuit = null;
+        if (Loader.isModLoaded(Mods.IndustrialCraft2.ID)) {
+            IC2_Circuit = CherryBlossomItemID
+                .create(GTModHandler.getModItem(Mods.IndustrialCraft2.ID, "itemPartCircuit", 1));
+            IC2_AdvCircuit = CherryBlossomItemID
+                .create(GTModHandler.getModItem(Mods.IndustrialCraft2.ID, "itemPartCircuitAdv", 1));
+        }
             FluidStack SolderingAlloy = Materials.SolderingAlloy.getMolten(0);
             FluidStack INDALLOY_140 = MaterialsAlloy.INDALLOY_140.getFluidStack(0);
             FluidStack MUTATED_LIVING_SOLDER = MaterialMisc.MUTATED_LIVING_SOLDER.getFluidStack(0);
@@ -86,8 +96,9 @@ public class BorderofLife {
             for (GTRecipe originalRecipe : circuitAssemblerRecipes.getAllRecipes()) {
                 if (originalRecipe == null) continue;
                 ItemStack output = originalRecipe.mOutputs[0];
-                // skip IC2 circuit
-                if (IC2_Circuit.equalItemStack(output) || IC2_AdvCircuit.equalItemStack(output)) continue;
+                // skip IC2 circuit if mod is loaded
+                if ((IC2_Circuit != null && IC2_Circuit.equalItemStack(output)) ||
+                    (IC2_AdvCircuit != null && IC2_AdvCircuit.equalItemStack(output))) continue;
 
                 // check fluid
                 if (originalRecipe.mFluidInputs == null || originalRecipe.mFluidInputs.length < 1) continue;

@@ -37,6 +37,7 @@ public class CommonProxy {
     public void init(FMLInitializationEvent event) {
         // Initialize recipes and other systems
         MachineLoader.loadMachines();
+
     }
 
     /**
@@ -47,7 +48,8 @@ public class CommonProxy {
         // Handle cross-mod integration
         try {
             MaterialPool materialPool = new MaterialPool();
-            materialPool.run(); // Run directly instead of using a new thread.
+            materialPool.run();
+            RecipeLoader.loadRecipes();// Run directly instead of using a new thread.
         } catch (Exception e) {
             LOG.error("Failed to register Bartworks materials", e);
         }
@@ -67,6 +69,6 @@ public class CommonProxy {
     public void onLoadComplete(FMLLoadCompleteEvent event) {
         CompatIntermodStaging.onLoadComplete(event);
         CompatHandler.onLoadComplete(event);
-        RecipeLoader.loadRecipes();
+
     }
 }
